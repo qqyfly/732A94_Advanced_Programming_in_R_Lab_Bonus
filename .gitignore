@@ -50,3 +50,4 @@ rsconnect/
 
 # RStudio Project file
 *.Rproj
+inst/doc
