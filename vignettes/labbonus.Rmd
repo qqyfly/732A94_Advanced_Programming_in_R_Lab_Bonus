@@ -38,7 +38,7 @@ library(labbonus)
 
 ## Create a ridgereg object
 
-Let's create a simple linear regression model using $iris$ data set with the formula: $Petal.Length \thicksim Species$.
+Let's create a simple linear regression model using iris data set with the formula
 
 ```{r create-labbonus-object-normal}
 ridgereg_mod <- ridgereg(Petal.Length ~ Species, data = iris, lambda = 1)

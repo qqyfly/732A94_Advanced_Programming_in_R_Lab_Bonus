@@ -1,0 +1,42 @@
+---
+title: "How to use ridgereg with real data"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{How to use ridgereg with real data}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Installation
+
+To install the `labbonus` package, use the following commands:
+
+```{r install-labbonus-package, eval=FALSE}
+devtools::install_github("qqyfly/732A94_Advanced_Programming_in_R_Lab_Bonus", build_vignettes = TRUE)
+```
+
+## Load required libraries
+
+In this step, we need to load the installed library `labbonus`. The code is showed below.
+
+The required packages will be download and installed automatically.
+
+```{r setup}
+library(labbonus)
+library(mlbench)
+library(caret)
+```
+
+## Divide the BostonHousing data (Age) into a test and training dataset
+```{r prepare_data}
+set.seed(42)
+data(BostonHousing)
+indx <- createDataPartition(BostonHousing$age, p = 0.75, list = FALSE)  
+training_set <- BostonHousing[indx,]   
+test_set  <- BostonHousing[-indx,]
+```
+
+#  Fit a linear regression model
+```{r}
+#fitted_lm = train(age~., data=training_set, method="lm")
+```

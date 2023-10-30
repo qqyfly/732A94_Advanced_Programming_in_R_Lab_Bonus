@@ -20,6 +20,7 @@ Imports:
     stats,
     dplyr,
     ggplot2,
-    nycflights13
+    nycflights13,
+    caret
 VignetteBuilder: knitr
 RoxygenNote: 7.2.3
