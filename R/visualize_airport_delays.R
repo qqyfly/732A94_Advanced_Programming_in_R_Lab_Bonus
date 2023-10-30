@@ -8,6 +8,7 @@
 #' @import nycflights13
 #' @import dplyr
 #' @import ggplot2
+#' @importFrom stats dist
 #' 
 #' @return Return plot
 #' @export visualize_airport_delays
