@@ -2,7 +2,7 @@
 % Please edit documentation in R/visualize_airport_delays.R
 \name{visualize_airport_delays}
 \alias{visualize_airport_delays}
-\title{Airport Delay Visualize}
+\title{Visualize Delay & Distance Relationship}
 \usage{
 visualize_airport_delays()
 }
@@ -10,6 +10,6 @@ visualize_airport_delays()
 Return plot
 }
 \description{
-visualize_airport_delays() creates a plot that visualize the mean delay of flights
-in different airports using ggplot2 library
+visualize_airport_delays() creates a plot that visualize the relation between
+mean(distance) and mean(delay) using ggplot2 library(using same destination)
 }

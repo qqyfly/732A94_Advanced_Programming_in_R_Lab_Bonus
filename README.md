@@ -70,3 +70,8 @@ This function use the pre created ridgereg object as a parameter, and return the
 predict(ridgereg_mod,x=c(1,2,3,4))
 ```
 
+## Visualize Delay & Distance Relationship
+
+```
+visualize_airport_delays()
+```

@@ -9,7 +9,7 @@ vignette: >
 
 # Overview
 
-The `ridgereg` package provides a lightweight framework for ridge linear regression in R. This vignette serves as a guide to understanding and using the main functions provided by the package.
+The `labbonus` package provides a `ridgereg` class for ridge linear regression in R. This vignette serves as a guide to understanding and using the main functions provided by the package.
 
 # Installation
 
@@ -51,7 +51,7 @@ ridgereg_mod <- ridgereg(Petal.Length ~ Species, data = iris, lambda = 1, qr = T
 ```
 
 
-## Print a Linreg object
+## Print a ridgereg object
 
 This function use the pre created ridgereg object as a parameter, and print out some information of the regression model.
 
@@ -73,5 +73,11 @@ This function use the pre created ridgereg object as a parameter, and return the
 
 ```{r predict_new_value}
 predict(ridgereg_mod,x=c(1,2,3,4))
+```
+
+## Visualize Delay & Distance Relationship
+
+```{r visualize}
+visualize_airport_delays()
 ```
 
