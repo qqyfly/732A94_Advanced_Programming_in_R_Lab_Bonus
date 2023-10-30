@@ -24,9 +24,9 @@ ridgereg <- function(formula, data, lambda = 0, qr = FALSE) {
   # object to save all the meta data and calculated values
   obj <- list(formula = formula,
               data = data,
+              data_name = substitute(data),
               lambda = lambda,
               qr = qr,
-              
               coefficients = NULL,
               fitted_values = NULL,
               x_name = NULL,
@@ -131,8 +131,9 @@ predict <- function(obj,x){
   if (is.null(x)){
     stop("input is null")
   }
+  
   x_norm <- scale(x)
-  prediction <- as.matrix(cbind(1,x_norm)) * obj$coefficients
+  prediction <- (as.matrix(cbind(1,x_norm)) %*% obj$coefficients[-1])[,]
   return(prediction)
 }
 
